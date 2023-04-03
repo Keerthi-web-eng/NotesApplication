@@ -4,19 +4,29 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background-color:#FCBACB;">
+<br>
+<br>
+<br>
+<br>
+<div class="container my-2" align="center" >
+
 <form action="#" th:action="@{/save}" th:object="${notes}" method="post">
-    <label for="notes">Notes</label>
-     <input type="text" th:field="*{Id}" id="id" placeholder="Id">
+    <label  style="font-size:40px;" for="notes">Notes:</label>
+     <input style="font-size:30px;background-color:#fdec96;" type="text" th:field="*{Id}" id="id" placeholder="Provide your notes Id here...">
     
-    <input type="text" th:field="*{Notes}" id="notes" placeholder="Provide your notes here...">
+    <input style="font-size:30px;background-color:#fdec96;" type="text" th:field="*{Notes}" id="notes" placeholder="Provide your notes here...">
     <span th:if="${#fields.hasErrors('notes')}" th:errors="Please type your notes here"></span>
     
-             <button type="submit" class="btn btn-info col-2">Save Notes</button>
+    <br><br>
+             <button style="font-size:30px;background-color:#fdec96;" type="submit" class="btn btn-info col-2">Save Notes</button>
              
  
 </form>
-        <a th:href="@{/}"> Back to your notes !</a>
+    <br><br>
+    <br><br>
+
+        <a style="font-size:20px;" th:href="@{/}"> Back to your notes !</a></div>
 
 </body>
 </html>

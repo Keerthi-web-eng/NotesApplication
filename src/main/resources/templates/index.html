@@ -3,12 +3,21 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Notes</title>
+<link href="index.css" rel="stylesheet">
 </head>
-<body>
-<div class="container my-2" align="center">
+<body style="background-color:#FCBACB;">
+<div class="container my-2" align="center" >
+<br>
+<br>
 
-<h3>Notes List</h3>
-<a th:href="@{/addNotes}" class="btn btn-primary btn-sm mb-3" >Add Notes</a>
+<h1 style="font-size:60px;background-color:#fdec96;">Heading 1</h1>
+<br>
+<a style="font-size:50px;background-color:#fdec96;" th:href="@{/addNotes}" class="btn btn-primary btn-sm mb-3" >Add Notes</a>
+<br>
+<br>
+<br>
+<br>
+
 	<table style="width:80%" border="1"
 		class = "table table-striped table-responsive-md">
 	<thead>
@@ -21,13 +30,13 @@
 </tr>
 </thead>
 <tbody>
-<tr th:each="note:${allnotes}">
-	<td th:text="${note.id}"></td>
+<tr align="center" th:each="note:${allnotes}">
+	<td align="center" th:text="${note.id}"></td>
 
-	<td th:text="${note.notes}"></td>
-			<td> <a th:href="@{/showFormForUpdate/{id}(id=${note.id})}"
+	<td  th:text="${note.notes}"></td>
+			<td align="center"> <a  style="font-size:20px;background-color:#fdec96;" th:href="@{/showFormForUpdate/{id}(id=${note.id})}"
 				class="btn btn-primary">Update</a>
-				<a th:href="@{/deleteNote/{id}(id=${note.id})}"
+				<a  style="font-size:20px;background-color:#fdec96;" th:href="@{/deleteNote/{id}(id=${note.id})}"
 				class="btn btn-danger">Delete</a>
 	
 </tr>

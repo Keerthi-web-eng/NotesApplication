@@ -5,9 +5,10 @@
 <title>Notes Update</title>
 
 </head>
-<body>
-	<div class="container">
-		<h1>Notes Update</h1>
+<body style="background-color:#FCBACB;">
+<div class="container my-2" align="center" >
+<h1 style="font-size:60px;background-color:#fdec96;">Notes Update</h1>
+
 		<hr>
 
 		<form action="#" th:action="@{/save}" th:object="${notes}" method="POST">
@@ -19,15 +20,15 @@
 			<input type="hidden" th:field="*{updateflag}" value="Y"/>
 			
 			
-			<input type="text" th:field="*{Notes}"  class="form-control mb-4 col-4">
+			<input style="font-size:30px;background-color:#fdec96;" type="text" th:field="*{Notes}"  class="form-control mb-4 col-4">
 								
 				
-				<button type="submit" class="btn btn-info col-2"> Update Notes</button>
+				<button style="font-size:30px;background-color:#fdec96;" type="submit" class="btn btn-info col-2"> Update Notes</button>
 		</form>
 		
 		<hr>
 		
-		<a th:href = "@{/}"> Back to your notes !</a>
+		<a style="font-size:20px;" th:href = "@{/}"> Back to your notes !</a>
 	</div>
 </body>
 </html>
