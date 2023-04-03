@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#" th:action="@{/save}" th:object="${notes}" method="post">
+    <label for="notes">Notes</label>
+     <input type="text" th:field="*{Id}" id="id" placeholder="Id">
+    
+    <input type="text" th:field="*{Notes}" id="notes" placeholder="Provide your notes here...">
+    <span th:if="${#fields.hasErrors('notes')}" th:errors="Please type your notes here"></span>
+    
+             <button type="submit" class="btn btn-info col-2">Save Notes</button>
+             
+ 
+</form>
+        <a th:href="@{/}"> Back to your notes !</a>
+
+</body>
+</html>

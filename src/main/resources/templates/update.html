@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Notes Update</title>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Notes Update</h1>
+		<hr>
+
+		<form action="#" th:action="@{/save}" th:object="${notes}" method="POST">
+			
+			<!-- Add hidden form field to handle update -->
+			
+			<input type="hidden" th:field="*{id}" />
+			
+			<input type="hidden" th:field="*{updateflag}" value="Y"/>
+			
+			
+			<input type="text" th:field="*{Notes}"  class="form-control mb-4 col-4">
+								
+				
+				<button type="submit" class="btn btn-info col-2"> Update Notes</button>
+		</form>
+		
+		<hr>
+		
+		<a th:href = "@{/}"> Back to your notes !</a>
+	</div>
+</body>
+</html>
